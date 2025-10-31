@@ -399,7 +399,7 @@ nav .nav_top
     display: flex;
     place-content: space-between;
     font-size: 1.4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
 }
 .payment h3{
     color: lightgray;
