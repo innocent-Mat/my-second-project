@@ -144,4 +144,3 @@ closePayment.addEventListener('click', () => {
 function scrollToNext() {
   document.getElementById('nextPart').scrollIntoView({ behavior: 'smooth' });
 }
-
