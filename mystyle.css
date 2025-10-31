@@ -1,0 +1,1135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font: 1.5rem "Lato" sans-serif;
+    line-height: 1.6rem;
+    overflow-x: hidden;
+}
+img
+{
+    display: block;
+}
+header
+{
+    background-color: rgb(7, 165, 190);
+}
+nav
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+nav .nav_top
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem;
+}
+.search
+{
+    display: flex;
+    align-items: center;
+    background-color: rgb(15, 13, 13);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.search input
+{
+    padding: 3px;
+    margin:2px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+
+}
+.search input::placeholder
+{
+    color: lightgray;
+    font: inherit;
+    
+}
+.limete
+{
+    font-size: 1.3rem;
+    color: lightgray;
+    border-bottom: 2px solid rgb(248, 249, 248);
+}
+.menu_bars
+{
+    display: none;
+}
+.nav_bottom .menuItem ul
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    list-style-type: none;
+}
+.nav_bottom .menuItem ul li a
+{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: aliceblue;
+    margin: 1rem;
+    position: relative;
+    transition: all .5s;
+
+}
+.menuItem ul li a:hover
+{
+    transform: translateY(2px);
+    color: rgb(3, 3, 3);
+
+}
+.menuItem ul li a::after
+{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: aliceblue;
+    top: 30px;
+    left: 0;
+    transform-origin: left;
+    transform: scale(0);
+    transition: all .5s;
+    
+}
+.menuItem ul li a:hover::after
+{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+
+
+/*  second phase*/
+
+.slider
+{
+    background-image: url(img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path:polygon(0 0, 100% 0, 100% 100%,0 85%);
+    overflow: hidden;
+}
+.sliderWrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1.2s ease-in-out;
+    width: 500vw;
+
+}
+.product
+{
+    width: 500vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sliderImg
+{
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50px;
+    z-index: 1;
+}
+.sliderBg
+{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color:aliceblue;
+}
+.sliderTitle{
+    position: absolute;
+    top: 8rem;
+    right: 5rem;
+    padding-right: 0rem;
+    font-size: 2rem;
+    z-index: 1;
+    color: aliceblue;
+}
+.sliderPrice
+{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    border: 1px solid white;
+    width: 6rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    z-index: 1;
+    color: white;
+}
+.buyButton
+{
+    position: absolute;
+    width: 8rem;
+    height: 4rem;
+    top: 20rem;
+    right: 10rem;
+    z-index: 1;
+    color: white;
+    background: transparent;
+    border: 2px solid white ;
+    cursor: pointer;
+}
+.buyButton:hover
+{
+    color: white;
+    background-color: rgb(6, 6, 6);
+}
+
+.product:nth-child(1) .sliderBg {
+  background-color: aliceblue;
+}
+.product:nth-child(2) .sliderBg {
+  background-color: rebeccapurple;
+}
+.product:nth-child(3) .sliderBg {
+  background-color: rgb(5, 147, 147);
+}
+.product:nth-child(4) .sliderBg {
+  background-color: cornflowerblue;
+}
+.product:nth-child(5) .sliderBg {
+  background-color: rgb(124, 115, 80);
+}
+
+.product:nth-child(1) .sliderPrice {
+  color: white;
+}
+.product:nth-child(2) .sliderPrice {
+  color: white;
+}
+.product:nth-child(3) .sliderPrice {
+  color: rgb(3, 254, 254);
+}
+.product:nth-child(4) .sliderPrice {
+  color: cornflowerblue;
+}
+.product:nth-child(5) .sliderPrice {
+  color: cornsilk;
+}
+
+
+/* diffrent product */
+.freatures
+{
+ display: grid;
+ grid-template-columns: repeat(4,1fr);
+ gap: 1rem;
+ padding: 1rem ;
+}
+
+.gift img{
+    
+    width: 40px;
+    height: 40px;
+    margin: 3rem;
+}
+
+/* third section */
+.details
+{
+    background-color: rgb(7, 165, 190);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: aliceblue;
+}
+
+.leftDetails
+{
+    width: 80vw;
+    height: auto;
+}
+.righteDetails
+{
+    position: relative;
+    margin-inline: 0rem auto;
+    max-width: 55vw;
+    padding-right:2rem;
+}
+.righteDetails h1{
+    position: absolute;
+    top: 7rem;
+    font-size: 3em;
+}
+.righteDetails h2{
+    position: absolute;
+    top: 9rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.righteDetails p{
+    margin-top: 10rem;
+    min-width: 50vw;
+    max-height: 20vw;
+        
+}
+.colors
+{
+    
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.color
+{
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    margin-inline:0 1rem ;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.color:hover
+{
+    transform: rotateY(180deg);
+}
+.black
+{
+    background: black;
+}
+.blue
+{
+    background: blue;
+}
+
+.sizes
+{
+    
+    display: flex;
+    align-items: center;
+    margin:2rem auto;
+}
+.size
+{
+    border: 1px solid black;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline:0 2rem ;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: black;
+    color: aliceblue;
+}
+.size:hover
+{
+    background-color: transparent;
+    color: white;
+    transform: translateY(2px);
+    border: 1px solid white;
+}
+.righteDetails button
+{
+    margin: 1rem;
+    width: 6rem;
+    height: 3rem;
+    font-family: cursive;
+    line-height: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    border: 1px solid aqua;
+}
+.righteDetails button:hover
+{
+    background-color: aliceblue;
+    color: black;
+    
+}
+.righteDetails a
+{
+    font-size: 1.3rem;
+    position: absolute;
+    right: 3rem;
+    bottom: 0rem;
+    color: aliceblue;
+}
+.righteDetails a:hover
+{
+    color: #0b0b0b;
+}
+/* payement part */
+.payment
+{
+    background-color: #0b0b0b;
+    position: absolute;
+    top: 2rem;
+    left: 22vw;
+    padding:1vw 3vw 0vw 3vw;
+    margin-top: 1vw;
+    display: none;
+    flex-direction: column;
+    place-content: center;
+    width: 50vw;
+    z-index: 1000;
+}
+.headers
+{
+    display: flex;
+    place-content: space-between;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.payment h3{
+    color: lightgray;
+}
+.headers i{
+    cursor: pointer;
+}
+.payment input
+{
+    background-color: black;
+    height: 4vw;
+    border: none;
+    border-bottom: 2px solid white;
+    margin-bottom: 1rem;
+    color: aliceblue;
+    padding: 1rem;
+}
+
+.payment h2{
+    color: rgb(106, 106, 106);
+}
+.card
+{
+    display: flex;
+    place-content: center;
+    padding-left: 1rem;
+    width: 8vw;
+    height: 4vw;
+}
+.month
+{
+    display: flex;
+    place-content: center;
+}
+.month input
+{
+    width: 14vw;
+    background-color: black;
+    height: 2vw;
+    border: none;
+    border-bottom: 2px solid white;
+    margin:0 0.7vw;
+    color: aliceblue;
+    padding:1rem;
+    
+}
+.payment button
+{
+    bottom: 0;
+    align-self: center;
+    margin: 1rem 1rem 0.3rem 1rem;
+    height: 4vw;
+    width: 60%;
+    font: inherit;
+    background-color: green;
+    border: 1px solid white;
+    border-radius: 2px;
+    color: aliceblue;
+    cursor: pointer;
+}
+/* fourth part */
+
+.imagetop
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Image
+{
+    margin: 1.5rem;
+}
+.Image h2
+{
+    padding: 1rem;
+    text-align: center;
+}
+.imagesdown
+{
+    border: 1px solid black;
+    display: flex;
+    width: 100%;
+    background-color: black;
+}
+
+.Imaged
+{
+    width:75%;
+    height: 45vw;
+    padding: 1rem;
+}
+.b 
+{
+    display: block;
+    place-content: center ;
+    position: relative;
+    color: lightgray;
+}
+.b h2 
+{
+    text-align: center;
+    left: 1rem;
+    position: absolute;
+    top: 5rem;
+
+}
+.b p
+{
+   text-align: center;
+    position: absolute;
+    top: 12rem;
+    
+}
+footer
+{
+    display: flex;
+    place-content:  center;
+    padding: 2rem 0;
+    position: relative;
+}
+.footerLeft
+{
+    display: flex;
+    place-content:center center;
+    padding-left: 1.5rem;
+    gap: 3.5rem;
+    position: absolute;
+    top:3rem;
+    left: 0rem;
+}
+.footerLeft ul{
+    margin:20px 0 ;
+    list-style-type: none;
+
+} 
+.footerLeft ul a {
+    text-decoration: none;
+    color: rgb(69, 69, 69);
+} 
+
+.footerRight
+{
+    position: absolute;
+    top: 2.5rem;
+    right: 7%;
+    padding-right: 0rem;
+}
+.footerRight input
+{
+    margin-top: 1rem;
+    width: 61%;
+    height: 2vw;
+}
+.footerRight button
+{
+    width: 30%;
+    height: 3vw;
+    margin-left: 0.3rem;
+    font: 1.2rem cursive;
+    color: aliceblue;
+    border: 1px solid aqua;
+    background-image: linear-gradient( rgb(7, 165, 190),black);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.footerRight button:hover
+{
+    transform: translateY(2px);
+    color: aliceblue;
+    background-image: linear-gradient( #08c4e1,rgb(33, 33, 33));
+}
+
+.footerRight h2{
+    padding-top: 0.5rem;
+}
+.footerRight span  i{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+.footerRight span  i:hover{
+    color: #08c4e1;
+}
+
+.footerRight span a
+{
+    color: gray;
+    text-decoration: none;
+}
+
+@media screen and (max-width:1035px) {
+    .sliderTitle
+    {
+        color: aqua;
+        font-size: 2rem;
+        -webkit-text-stroke: 0.4px  rgb(10, 10, 10); /* border thickness + color */
+
+    }
+    .sliderPrice
+    {
+        top: 1rem;
+        left: 0;
+    }
+    .buyButton
+    {
+        background-color: black;
+    }
+    .freatures 
+    { 
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    /* footer */
+    footer
+    {
+        display:flex;
+        flex-direction: column;
+        place-content: center;
+        position: relative;    
+    }
+    .footerLeft
+    {
+        position: absolute;
+        top: 1rem;
+        left: 3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        flex-wrap: nowrap;
+        margin:1rem 2px ;
+        padding: 0;        
+        gap:1rem;
+    }
+    .footerLeft ul
+    {
+        margin: 3px 3px;
+    }
+    .footerRight
+    {
+        position: absolute;
+        top:23rem ;
+        width: 100%;
+        right: 0;
+        background-color:aliceblue;
+
+    }
+    .footerRight h2
+    {
+        text-align: left;
+    } 
+    .footerRight input
+    {
+        margin:1rem 2rem;
+        height: 2.1rem;
+        width: 60%;
+
+    }
+    .footerRight button
+    {
+        width: 30%;
+        height: 6vw;
+        margin-left: 2rem;
+        
+    }
+    .footerRight h2{
+        text-align: center;
+    }
+    .footerRight span {
+       margin-left: 0rem;
+       padding: 0;
+    }
+
+    .footerRight span  i:hover{
+        color: #08c4e1;
+    }
+
+    .footerRight span a
+    {
+        color: gray;
+        text-decoration: none;
+        text-align: center;
+    }
+   
+}
+@media screen and (max-width: 750px) {
+
+    .sliderTitle
+    {
+        color: aqua;
+        font-size: 2rem;
+        -webkit-text-stroke: 0.2px  rgb(10, 10, 10); /* border thickness + color */
+
+    }
+    .sliderPrice
+    {
+        top: 1rem;
+        left: 0;
+    }
+    .freatures { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .leftDetails
+    {
+        width: 85vw;
+        height: auto;
+    }
+    .righteDetails h1{
+        position: absolute;
+        top: 7rem;
+        left: 0;
+        font-size: 2.5rem;
+    }
+    .righteDetails h2{
+    position: absolute;
+    top: 9rem;
+    font-size: 2rem;
+    margin-top: 3px;
+    padding:0rem;
+}
+
+     footer
+    {
+        display:flex;
+        flex-direction: column;
+        place-content: center;
+        position: relative;
+    }
+    .footerLeft
+    {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap;
+        margin:1rem 2px ;
+        padding: 0.5rem;        
+        gap: 7px;
+    }
+    .footerLeft h3
+    {
+        margin-top: 1rem;
+    }
+    .footerLeft ul
+    {
+        margin: 3px 3px;
+    }
+    .footerRight
+    {
+        position: absolute;
+        top:31rem ;
+        width: 100%;
+        right: 0;
+        background-color: rgb(208, 217, 224);
+
+    }
+    .footerRight h2
+    {
+        text-align: left;
+    } 
+    .footerRight input
+    {
+        margin:1rem 2rem;
+        height: 2.1rem;
+        width: 60%;
+
+    }
+    .footerRight button
+    {
+        width: 30%;
+        height: 6vw;
+        margin-left: 2rem;
+        
+    }
+    .footerRight h2{
+        text-align: center;
+    }
+    .footerRight span {
+       margin-left: 0rem;
+       padding: 0;
+    }
+
+    .footerRight span a
+    {
+        color: gray;
+        text-decoration: none;
+        text-align: center;
+
+    }
+
+}
+@media screen and (max-width:596px) {
+    nav .nav_top
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+    .nav_top, .search, .limete, .nav_bottom
+    {
+        display: none;
+    }
+    .menu_bars
+    {
+    display: flex;
+    color: aliceblue;
+    cursor: pointer;
+    }
+     nav .fa
+    {
+        font-size: 1.8rem;
+    } 
+    .menu_bars .fa-close
+    {
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+    .nav_bottom .menuItem ul
+    {
+        display: flex;
+        flex-direction: column;
+        place-content:left left;
+        margin: 0.5rem;
+        list-style-type: none;
+         
+    }
+    .nav_bottom .menuItem ul li a
+    {
+        display: block;
+        text-align: center;
+    }
+    .nav_bottom .menuItem ul li a:hover
+    {
+        background-color: aliceblue;
+        color: gray;
+    }
+    .nav_bottom .menuItem ul li a::after
+    {
+        content: none;
+    }
+    .slider
+    {
+        width: 100vw;
+        height: 100vw;
+        align-content: center;
+    }
+    .sliderImg
+{
+    max-width: 60vw;
+    max-height: 60vw;
+    border-radius: 50px;
+    z-index: 1;
+}
+    .sliderBg
+    {
+        position: absolute;
+        width: 65vw;
+        height: 65vw;
+    }
+    .sliderTitle{
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    z-index: 1;
+    color: aqua;
+    -webkit-text-stroke: 0.2px  rgb(10, 10, 10); /* border thickness + color */
+}
+.sliderPrice
+{
+    position: absolute;
+    top: 2rem;
+    left: 0.6rem;
+    border: 1px solid white;
+    width: 5rem;
+    height: 3rem;
+}
+.buyButton
+{
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    top: 43vw;
+    right: 2rem;
+   
+    background: black
+}
+.freatures { 
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    gap: 0.2rem;
+    padding: 0.5rem ;
+    }
+.gift img{
+    margin-left: 41vw;
+}
+.details
+{
+    background-color: rgb(7, 165, 190);
+    clip-path:none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: aliceblue;
+}
+.leftDetails
+{
+    width: 100vw;
+    height: auto;
+    background-color: #0b0b0b;
+    display: block;
+    width: 100%;
+}
+.righteDetails
+{
+    position: absolute;
+    margin-inline: 0rem auto;
+    max-width: 55vw;
+    padding-right:2rem;
+}
+.righteDetails h1{
+    position: absolute;
+    top: 5rem;
+    font-size: 2rem;
+}
+.righteDetails h2{
+    position: absolute;
+    
+}
+.righteDetails p{
+    text-align: center;
+    height: 100%;
+        
+}
+.size
+{
+    width: 30px;
+    height: 20px;
+    display: flex;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.righteDetails button
+{
+    margin: 0.4rem;
+    width: 6rem;
+    height: 2rem;
+    
+}
+.righteDetails a
+{
+    font-size: 1rem;
+    right: 0rem;
+    bottom: 0rem;
+}
+.righteDetails a:hover
+{
+    color: #ead2d2;
+}
+
+.images .imagetop
+{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+.Image
+{
+    margin: 0.5rem;
+}
+.Image h2
+{
+    padding: 1rem;
+    text-align: center;
+}
+.imagesdown
+{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.Imaged
+{
+    padding-right:0rem;
+    width:75vw;
+    height: 75vw;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+.f
+{
+    
+    float: right;
+    right: 0;
+}
+.b h2 
+{
+    left: 4rem;
+    top: 2rem;
+
+}
+.b p
+{
+    top: 8rem; 
+}
+.footerRight
+    {
+        position: absolute;
+        top:45rem ;
+        width: 100%;
+        right: 0;
+        background-color: rgb(133, 189, 239);
+
+    }
+      .footerLeft
+    {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
+        margin:1rem 2px ;
+        padding: 1rem;        
+        gap:0 2.9rem;
+    }
+    .footerRight button
+    {
+        width:27%;
+        height: 9vw;
+        margin-left: 2rem;
+        
+    }
+}
+@media screen and (max-width:455px) {
+    .righteDetails h1{
+    position: absolute;
+    top: 2rem;
+    font-size: 1.4rem;
+}
+.leftDetails
+{
+    width: 100vw;
+    height: auto;
+    background-color: #0b0b0b;
+    display: block;
+}
+.righteDetails h2{
+    position: absolute;
+    top: 16vw;
+    font-size: 1rem;
+}
+.righteDetails p{
+    text-align: center;
+    font-size: 0.5rem;
+    height: 100%;
+    padding: 0;
+    margin-top: 6rem;
+}
+    
+.colors
+{
+    
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 27px;
+   
+}
+.color
+{
+    width: 20px;
+    height: 20px;
+    margin-inline:0 0.9rem ;
+    border-radius: 2px;
+    
+}
+
+
+
+.sizes
+{
+    
+    display: flex;
+    align-items: center;
+    margin-top:4rem;
+}
+.size
+{
+    border: 1px solid rgb(249, 247, 247);
+    width: 60px;
+    height: 25px;
+    margin-inline:0 1rem ;
+    font-size: 0.7rem;
+    
+}
+
+.righteDetails button
+{
+    margin: 0rem;
+    width: 4rem;
+    height: 1rem;
+    line-height: 1rem;
+    padding: 0;
+    font-size: 0.4rem;
+}
+.righteDetails a
+{
+    font-size: 0.5rem;
+    position: absolute;
+    right: 0rem;
+}
+.righteDetails a:hover
+{
+    color: #f8dcdc;
+}
+}
+
+
+
+
