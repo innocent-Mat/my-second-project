@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html
+{
+    scroll-behavior: smooth;
+}
 body{
     font: 1.5rem "Lato" sans-serif;
     line-height: 1.6rem;
