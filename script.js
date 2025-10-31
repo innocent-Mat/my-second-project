@@ -141,3 +141,7 @@ closePayment.addEventListener('click', () => {
   payment.style.display = "none";
 });
 
+function scrollToNext() {
+  document.getElementById('nextPart').scrollIntoView({ behavior: 'smooth' });
+}
+
