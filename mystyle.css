@@ -399,7 +399,7 @@ nav .nav_top
     flex-direction: column;
     place-content: center;
     width: 50vw;
-    z-index: 1000;
+    z-index: 100000;
 }
 .headers
 {
